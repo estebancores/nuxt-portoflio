@@ -17,4 +17,8 @@ $ npm run start
 $ npm run generate
 ```
 
+#Nota
+
+Carpeta "public", hace parte de firebase, no obligatoria, contiene dist de "npm run generate"
+
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
