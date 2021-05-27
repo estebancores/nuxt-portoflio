@@ -1,0 +1,76 @@
+.logo__theme {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+.nav__menu__options.dark-theme,
+.nav__menu__options.light-theme {
+  background: transparent;
+}
+.logo__theme button i{
+  font-size: 1.5rem;
+}
+.name__logo {
+  font-weight: bold;
+  color: var(--light-theme-text-color);
+}
+.nav__menu__options {
+  list-style: none;
+  border-bottom: 1px solid #ccc;
+  padding: 0 20px 10px 20px;
+  display: flex;
+  justify-content: space-around;
+}
+.nav__menu__options li {
+  transition: all .3s linear;
+}
+.nav__menu__options li.active {
+  position: relative;
+}
+
+.nav__menu__options li.active:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  left: 0;
+  bottom: 0;
+}
+.nav__menu__options.light-theme li.active:after {
+  background: var(--light-theme-text-color);
+}
+.nav__menu__options.dark-theme li.active:after {
+  background: var(--dark-theme-text-color);
+}
+.language__selector {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.lang__item {
+  position: relative;
+}
+.lang__item .lang__image {
+  position: absolute;
+  left: -30px;
+  top: 3px;
+  width: 25px;
+  height: 18px;
+  background: url('../../../assets/images/langs.png');
+  background-size: 25px 45px;
+}
+.lang__item .lang__image.es {
+  background-position-y: 17px;
+  height: 17px;
+}
+
+@media screen and (max-width: 480px){
+  .nav__menu__options li {
+    border-right: 1px solid #ccc;
+    padding: 0 5px;
+  }
+  .nav__menu__options li:last-child {
+    border: none;
+  }
+}

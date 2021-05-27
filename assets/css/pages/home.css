@@ -1,0 +1,8 @@
+.main__introduction div:first-child {
+  font-size: clamp( 1.2rem, 5vw, 2rem);
+  font-weight: bold;
+}
+
+.main__introduction div:last-child {
+  font-size: clamp( 1rem, 5vw, 1.5rem) ;
+}

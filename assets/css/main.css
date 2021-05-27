@@ -1,0 +1,66 @@
+@import './layout/header.css';
+@import './layout/skill.css';
+@import './pages/experiencies.css';
+@import './pages/contact.css';
+@import './pages/home.css';
+
+:root {
+  --light-theme-bg-color: rgba(0,0,0,.24);
+  --light-theme-text-color: rgba(244,244,245,.9);
+  --dark-theme-bg-color: #1E2225;
+  --dark-theme-text-color: #e2e2e2;
+}
+
+html, body  {
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(farthest-side ellipse at 10% 0,#333867,#17193b);
+  min-height: calc(100vh - 16px);
+}
+a,
+a:active,
+a:focus {
+  text-decoration: none;
+  color: var(--light-theme-text-color);
+}
+
+.btn {
+  padding: 10px;
+  transition: all .3s ease;
+  cursor: pointer;
+}
+.btn-flat {
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+
+}
+.btn-flat:hover {
+  background-color: #cccccc;
+}
+
+.light-theme {
+  background: var(--light-theme-bg-color);
+  color: var(--light-theme-text-color);
+}
+
+.dark-theme {
+  background: var(--dark-theme-bg-color);
+  color: var(--dark-theme-text-color);
+}
+
+.card {
+  margin: 10px 0;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.3s ease-in-out;
+}
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+  transform: scale(0.98);
+}
+

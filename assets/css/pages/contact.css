@@ -1,0 +1,30 @@
+.form__contact button {
+  width: 40%;
+  padding: 10px 0;
+  background: #474d84;
+  border: none;
+  border-radius: 5px;
+  color: var(--light-theme-text-color) ;
+  margin-top: 10px;
+}
+.info__fact  span.s_f{
+  font-weight: bold;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+.form__contact textarea,
+.form__contact input {
+  display: block;
+  width: 100%;
+  padding: 10px 20px;
+  background: var(--light-theme-bg-color);
+  color: #f3f3f3;
+  border: none;
+  border-radius: 5px;
+  margin: 10px 0 0 0;
+  box-sizing: border-box;
+}
+.error__form__message {
+  font-size: 12px;
+  font-style: italic;
+}
