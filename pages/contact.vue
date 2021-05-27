@@ -32,12 +32,10 @@
                     <textarea v-model="form.message" :placeholder="translations.message"/>
                     <span class="error__form__message" v-if="formErrors.message"> {{ formErrors.message[0] }} </span>
                   </el-col>
-                  <el-col>
-                    <div style="margin: 10px 0;">
-                      <recaptcha @error="onError" @success="onSuccess" @expired="onExpired"/>
-                    </div>
+                  <el-col style="margin: 10px 0;  display: flex; justify-content: center;" >
+                    <recaptcha @error="onError" @success="onSuccess" @expired="onExpired"/>
                   </el-col>
-                  <el-col style="text-align: center">
+                  <el-col style="text-align: center;">
                     <button type="submit" style="cursor:pointer;"> {{ $t('contact.form.button') }}</button>
                   </el-col>
                 </el-row>

@@ -28,3 +28,6 @@
   font-size: 12px;
   font-style: italic;
 }
+.form__contact {
+  max-width: 500px;
+}
