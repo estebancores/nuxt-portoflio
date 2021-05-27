@@ -33,12 +33,12 @@
                     <span class="error__form__message" v-if="formErrors.message"> {{ formErrors.message[0] }} </span>
                   </el-col>
                   <el-col>
-                    <!--              <div>-->
-                    <!--                <recaptcha @error="onError" @success="onSuccess" @expired="onExpired"/>-->
-                    <!--              </div>-->
+                    <div style="margin: 10px 0;">
+                      <recaptcha @error="onError" @success="onSuccess" @expired="onExpired"/>
+                    </div>
                   </el-col>
                   <el-col style="text-align: center">
-                    <button type="submit"> {{ $t('contact.form.button') }}</button>
+                    <button type="submit" style="cursor:pointer;"> {{ $t('contact.form.button') }}</button>
                   </el-col>
                 </el-row>
               </form>
@@ -96,7 +96,7 @@
         }
       },
       async submitForm() {
-        if (this.validateForm()) return
+        if (this.validateForm() || !this.capchat) return
         const messageRef = this.$fire.database.ref('message')
         await messageRef.set(this.form)
         let translations = this.$t('contact.dialog')

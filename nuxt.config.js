@@ -27,7 +27,8 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    '@/plugins/element-ui'
+    '@/plugins/element-ui',
+    '@/plugins/initFirebaseFunctions'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -53,7 +54,7 @@ export default {
         appId: "1:775549150763:web:f3d32cc116223c3931ac6e"
       },
       services: {
-        auth: false,
+      auth: false,
         firestore: false,
         functions: false,
         storage: false,
@@ -64,21 +65,20 @@ export default {
         remoteConfig: false
       },
       analytics: {
-        collectionEnabled: true,
+        collectionEnabled: true // default
       },
       database: {
         emulatorHost: 'localhost'
       }
-      }],
-    // ['@nuxtjs/recaptcha',{
-    //     //6LfYb-wUAAAAAPJwy50hpxtGc8pu3MBevwftaT5d
-    //     siteKey: '6LfYb-wUAAAAAPJwy50hpxtGc8pu3MBevwftaT5d',
-    //     language: 'es',
-    //     size: 'invisible',
-    //     hideBadge: true,
-    //     version: 2
-    //   }
-    // ]
+    }],
+    ['@nuxtjs/recaptcha',{
+        siteKey: '6Lc97vMaAAAAACgNMaPn946z6eUz5tIyY-uFtPuC',
+        language: 'es',
+        size: 'normal',
+        hideBadge: true,
+        version: 2
+      }
+    ]
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
